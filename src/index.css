@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import "tailwindcss";
+
+/* Custom breakpoints for xs */
+@layer components {
+  .text-xxs {
+    font-size: 0.625rem;
+  }
+  
+  @media (min-width: 475px) {
+    .xs\:text-xs {
+      font-size: 0.75rem;
+    }
+    
+    .xs\:flex-row {
+      flex-direction: row;
+    }
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  background-image: url('/bg.svg');
+  background-color: #777777;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 640px) {
+  body {
+    background-size: auto 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+}

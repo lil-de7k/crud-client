@@ -20,10 +20,10 @@ const UserForm = ({ fetchUsers, editUser, setShowForm }) => {
     e.preventDefault();
     try {
       if (editUser) {
-        await axios.put(`http://localhost:8000/api/update/user/${editUser._id}`, formData);
+        await axios.put(`https://crud-sever-ten.vercel.app/api/update/user/${editUser._id}`, formData);
         toast.success("User updated successfully!");
       } else {
-        await axios.post("http://localhost:8000/api/user", formData);
+        await axios.post("https://crud-sever-ten.vercel.app/api/user", formData);
         toast.success("User added successfully!");
       }
       fetchUsers();

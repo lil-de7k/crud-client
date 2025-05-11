@@ -12,7 +12,7 @@ const UserTable = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/user");
+      const res = await axios.get("https://crud-sever-ten.vercel.app/api/user");
       setUsers(res.data);
     } catch (err) {
       setUsers([]);
@@ -21,7 +21,7 @@ const UserTable = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/delete/user/${id}`);
+      await axios.delete(`https://crud-sever-ten.vercel.app/api/delete/user/${id}`);
       toast.success("User deleted successfully!");
       fetchUsers();
     } catch (err) {
